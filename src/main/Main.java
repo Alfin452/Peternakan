@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 import peternakan.Ternak;
 import CRUD.database1;
+import gui.frameutama;
 
 /**
  *
@@ -21,12 +22,15 @@ import CRUD.database1;
 //    private static List<Ternak> daftarTernak = new ArrayList<>();
 
     public static void main(String[] args) {
-        database1 dbConnect = new database1();
+        new frameutama().setVisible(true);
+        
+        
+//        database1 dbConnect = new database1();
 //        dbConnect.simpanUji("2210010359", "Muhammad Alfin", "085435662716", "Jl.Kecubung");
 //        dbConnect.ubahUji("2210010359", "Muhammad Arull", "085435662716", "Jl.Sunglut");
 //        dbConnect.hapusUji("2210010359", "", "", "");
 //        
-//        dbConnect.simpanPenyakit(100, "demam", "badan hewan lemas", "diberi pakan yang bersih", "10px");
+//        dbConnect.simpanPenyakit(101, "demam", "badan hewan lemas", "diberi pakan yang bersih", "11px");
 //        dbConnect.ubahPenyakit(100, "batuk", "batuk berdahak", "diberi obat komik", "10px");
 //        dbConnect.hapusPenyakit(100, "", "", "", "");
 //        dbConnect.dataPenyakit();
@@ -47,12 +51,8 @@ import CRUD.database1;
 //        dbConnect.simpanTernak(11, "Kucing Kampung", 100);
 //        dbConnect.ubahTernak(11, "Kucing AnggoraXKampung", 100);
 //        dbConnect.hapusTernak(11, "", 0);
-//        dbConnect.dataTernak();
-        dbConnect.cariTernak(11);
-
-
-        
-
+//        dbConnect.dataTernak:)
+//        dbConnect.cariTernak(11);
     }
 //        tampilMenuUtama();
     }

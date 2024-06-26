@@ -106,7 +106,7 @@ public class database1 {
             System.out.println(e.getMessage());
         } 
     }
-         public void hapusPenyakit (int id_penyakit, String nama_penyakit, String ciri, String penanggulangan, String radius) {
+         public void hapusPenyakit (int id_penyakit) {
         try{
             String sql = "delete from penyakit where id_penyakit = ?";
             PreparedStatement perintah = connectionDB.prepareStatement(sql);
@@ -159,7 +159,7 @@ public class database1 {
             perintah.setString(2, nama_peternak);
             perintah.setString(3, hp_peternak);
             perintah.setString(4, email_peternak);
-            perintah.setInt(5, id_peternak);
+            perintah.setInt(5, id_peternakan);
             perintah.executeUpdate();
             System.out.println("Data Berhasil Disimpan");
         }
@@ -174,7 +174,7 @@ public class database1 {
             perintah.setString(1, nama_peternak);
             perintah.setString(2, hp_peternak);
             perintah.setString(3, email_peternak);
-            perintah.setInt(4, id_peternak);
+            perintah.setInt(4, id_peternakan);
             perintah.setInt(5, id_peternak);
             perintah.executeUpdate();
             System.out.println("Data Berhasil Diubah");
@@ -183,7 +183,7 @@ public class database1 {
             System.out.println(e.getMessage());
         } 
     } 
-    public void hapusPeternak (int id_peternak, String nama_peternak, String hp_peternak, String email_peternak, int id_peternakan) {
+    public void hapusPeternak (int id_peternak) {
         try{
             String sql = "delete from peternak where id_peternak = ?";
             PreparedStatement perintah = connectionDB.prepareStatement(sql);
@@ -262,7 +262,7 @@ public class database1 {
             System.out.println(e.getMessage());
         } 
     } 
-    public void hapusPeternakan (int id_peternakan, String nama_peternakan, String alamat_peternakan, int jumlah, int id_ternak, String verified) {
+    public void hapusPeternakan (int id_peternakan) {
         try{
             String sql = "delete from peternakan where id_peternakan = ?";
             PreparedStatement perintah = connectionDB.prepareStatement(sql);
@@ -338,7 +338,7 @@ public class database1 {
             System.out.println(e.getMessage());
         } 
     } 
-    public void hapusTernak (int id_ternak, String nama_hewan, int id_penyakit) {
+    public void hapusTernak (int id_ternak) {
         try{
             String sql = "delete from ternak where id_ternak = ?";
             PreparedStatement perintah = connectionDB.prepareStatement(sql);
@@ -378,7 +378,6 @@ public class database1 {
          } 
          catch (Exception e) {
          }
-     }
-    
+     } 
 }
 
